@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        .inputContain {
+            width: 500px;
+            margin: 100px auto;
+            text-align: center;
+            background-color: #bfa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inputContain">
+        <input type="checkbox" value="a" /><label>张三</label><br />
+        <input type="checkbox" value="b" /><label>李四</label><br />
+        <input type="checkbox" value="c" /><label>王五</label><br />
+        <input type="checkbox" value="d" /><label>刘一</label><br />
+        <input type="checkbox" value="e" /><label>马六</label>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".inputContain").mousedown(function () {
+                $("input").mouseover(function () {
+                    if ($(this).is(':checked')) {
+                        $(this).removeAttr("checked");
+                    } else {
+                        $(this).prop("checked", true);
+                    }
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>
